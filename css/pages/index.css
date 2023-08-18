@@ -1,0 +1,165 @@
+:root {
+    /* Declaro variables CSS con colores principales */
+    --color-theme: #ffce30;
+    --color-active: #288ba8;
+    --color-back-active: #746ab0;
+    --color-back-inactive: #c4c6c9;
+    --color-titulos: #e83845;
+    --color-texto-blanco: #fff;
+    --color-verde: #28a79c;
+    --color-font: #1d1d1d;
+    --color-button: #7f8c8d;
+    --color-gradient: linear-gradient(to right,
+            var(--color-theme),
+            var(--color-back-active));
+}
+
+body {
+    background-color: #e0e0e0;
+}
+
+/* Titulo */
+.titulo-seccion {
+    text-shadow: 2px 2px rgba(0, 0, 0, .4);
+}
+
+/* Formulario agregar peliculas */
+.form-favoritos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-favoritos div {
+    padding: 10px;
+}
+
+/* Seccion Mensajes */
+.success-message {
+    background-color: #28a745;
+    border-radius: 15px;
+    padding: 10px 20px;
+}
+
+.warning-message {
+    background-color: #ffc107;
+    border-radius: 15px;
+    padding: 10px 20px;
+}
+
+.error-message {
+    background-color: #dc3545;
+    border-radius: 15px;
+    padding: 10px 20px;
+}
+
+/* Pag pel*/
+.pagina-actual {
+    display: flex;
+    justify-content: end;
+
+    font-size: 15px;
+}
+
+/* Seccion Peliculas*/
+#sec_peliculas {
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.contenedorPeliculas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.contenedorPeliculas .cartelera {
+    display: flex;
+    flex-direction: column;
+    min-height: 10px;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.contenedorPeliculas .poster {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 15px;
+}
+
+.contenedorPeliculas .titulo {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.contenedorPeliculas p {
+    font-size: 12px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    color: var(--color-verde);
+}
+
+.contenedorPeliculas .button-fav {
+    display: flex;
+    justify-content: center;
+}
+
+/*Estilos GeneralesBotones Favoritos*/
+.button {
+    cursor: pointer;
+    background-color: var(--color-button);
+    color: var(--color-texto-blanco);
+    font-weight: 600;
+    font-size: 10px;
+    margin: 10px auto;
+    padding: 10px 0;
+    text-align: center;
+    width: 200px;
+    text-decoration: none;
+    box-shadow: 0px 3px 0px #373c3c;
+}
+
+.button span {
+    margin-right: 10px;
+}
+
+.button.medium {
+    width: 200px;
+}
+
+.button.radius {
+    border-radius: 50px;
+}
+
+.button:hover {
+    box-shadow: 0px 0px 0px;
+}
+
+/*Estilos GeneralesBotones Paginacion*/
+.paginacion button {
+    cursor: pointer;
+    border: none;
+    display: inline;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 20px;
+    height: 50px;
+    width: 150px;
+    background-color: #070059;
+    color: var(--color-texto-blanco);
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s ease all;
+}
+
+.paginacion button:hover {
+    background-color: var(--color-back-active);
+}
+
+.success-message,
+.error-message,
+.warning-message {
+    display: none;
+}

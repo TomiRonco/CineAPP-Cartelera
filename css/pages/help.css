@@ -1,0 +1,112 @@
+:root {
+    /* Declaro variables CSS con colores principales */
+    --color-theme: #ffce30;
+    --color-active: #288ba8;
+    --color-back-active: #746ab0;
+    --color-back-inactive: #c4c6c9;
+    --color-titulos: #e83845;
+    --color-texto-blanco: #fff;
+    --color-verde: #28a79c;
+    --color-font: #1d1d1d;
+    --color-button: #7f8c8d;
+    --color-gradient: linear-gradient(to right,
+            var(--color-theme),
+            var(--color-back-active));
+}
+
+.contenidoPrincipal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.contenidoPrincipal #sec_ayuda {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 50px;
+}
+
+/* Titulo */
+.titulo-seccion {
+    text-shadow: 2px 2px rgba(0, 0, 0, .4);
+}
+
+/* Mensaje de exito/errores */
+.mensaje-exito {
+    background-color: green;
+    color: white;
+    border-radius: 15px;
+    padding: 10px 20px;
+    margin: 10px;
+}
+
+.mensaje-error {
+    background-color: red;
+    color: white;
+    border-radius: 15px;
+    padding: 10px 20px;
+    margin: 10px;
+}
+
+
+
+/* Formulario*/
+#form-cine_contacto .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#form-cine_contacto .campo {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+}
+
+.form .campo {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.campo label {
+    margin-bottom: 1px;
+}
+
+.input-text {
+    width: 100%;
+    padding: 5px;
+    border-radius: 0;
+    border-width: 1.5px;
+    border-color: var(--color-font);
+}
+
+.form #mensaje {
+    height: 180px;
+}
+
+.button {
+    cursor: pointer;
+    border: none;
+    display: inline;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 40px;
+    width: 70px;
+    background-color: var(--color-verde);
+    color: var(--color-texto-blanco);
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s ease all;
+}
+
+.button:hover {
+    background-color: var(--color-back-active);
+}
